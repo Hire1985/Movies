@@ -12,6 +12,6 @@ import { MoviesService } from '../../service/movies.service';
 })
 export default class SearchMoviesComponent {
   moviesService = inject(MoviesService);
-  searchMovies = input.required<Movies[]>()
+  searchMovies = input<Movies[]>()
     imageBaseUrl: string = 'https://image.tmdb.org/t/p/w500';
  }
