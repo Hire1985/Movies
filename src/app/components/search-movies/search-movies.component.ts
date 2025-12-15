@@ -1,6 +1,5 @@
 import { ChangeDetectionStrategy, Component, inject, input } from '@angular/core';
 import FavoritesMoviesComponent from "../favorites-movies/favorites-movies.component";
-import { SearchComponent } from "../search/search.component";
 import { Movies } from '../../interfaces/movies.interface';
 import { MoviesService } from '../../service/movies.service';
 

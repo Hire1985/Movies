@@ -10,6 +10,8 @@ export class MoviesMapper {
       title: item.title,
       overview: item.overview,
       poster_path: item.poster_path,
+      date: item.release_date,
+      vote_average: item.vote_average,
     };
   }
 
