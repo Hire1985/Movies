@@ -18,6 +18,7 @@ export class MoviesService {
 
   constructor() {
     this.loadMovies();
+    this.loadReleasesMovies();
   }
 
   loadMovies() {
@@ -30,7 +31,6 @@ export class MoviesService {
        const movies = MoviesMapper.mapMoviesResponseToMoviesList(resp.results);
        this.movies.set(movies);
        this.moviesLoading.set(false);
-       console.log({movies});
 
     });
   }
@@ -50,5 +50,16 @@ export class MoviesService {
     //     console.log({search});
 
     // })
+  }
+
+  loadReleasesMovies () {
+    this.http.get<MoviesResponses>(`${environment.moviesUrl}/movie/upcoming`, {
+      params: {
+        api_key: environment.apiKey,
+      }
+    }).subscribe((resp) => {
+      console.log({resp});
+
+    })
   }
 }
