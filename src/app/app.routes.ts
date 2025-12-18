@@ -9,6 +9,11 @@ export const routes: Routes = [
         path: 'search',
         loadComponent: () => import('./components/search-movies/search-movies.component'),
       },
+      {
+        path: 'releases',
+        loadComponent: () => import('./components/next-releases/next-releases.component'),
+
+      }
     ],
   },
   {

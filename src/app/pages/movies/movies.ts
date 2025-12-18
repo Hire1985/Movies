@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import  FavoritesMoviesComponent  from "../../components/favorites-movies/favorites-movies.component";
-import { NextReleasesComponent } from "../../components/next-releases/next-releases.component";
+import  NextReleasesComponent  from "../../components/next-releases/next-releases.component";
 import { MoviesService } from '../../service/movies.service';
 import NavComponent from "../../components/Nav/Nav.component";
 

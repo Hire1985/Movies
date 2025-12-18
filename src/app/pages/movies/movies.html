@@ -7,6 +7,6 @@
     <!-- Sección Destacadas -->
     <app-favorites-movies [moviesPoster]="moviesService.movies()"/>
     <!-- Sección Próximos Estrenos -->
-    <app-next-releases />
+    <app-next-releases [moviesReleases]="moviesService.moviesReleases()"/>
   </div>
 </div>

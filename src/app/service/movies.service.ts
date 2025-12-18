@@ -14,11 +14,11 @@ export class MoviesService {
   private http = inject(HttpClient);
 
   movies = signal<Movies[]>([]);
+  moviesReleases = signal<Movies[]>([]);
   moviesLoading = signal<boolean>(true);
 
   constructor() {
     this.loadMovies();
-    this.loadReleasesMovies();
   }
 
   loadMovies() {
@@ -58,7 +58,8 @@ export class MoviesService {
         api_key: environment.apiKey,
       }
     }).subscribe((resp) => {
-      console.log({resp});
+      const releases = MoviesMapper.mapMoviesResponseToMoviesList(resp.results);
+      this.moviesReleases.set(releases);
 
     })
   }
