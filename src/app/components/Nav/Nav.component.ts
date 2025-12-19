@@ -3,6 +3,7 @@ import { RouterOutlet, RouterLink } from "@angular/router";
 import { MoviesService } from '../../service/movies.service';
 import { Movies } from '../../interfaces/movies.interface';
 import SearchMoviesComponent from "../search-movies/search-movies.component";
+import NextReleasesComponent from "../next-releases/next-releases.component";
 
 @Component({
   selector: 'app-nav',

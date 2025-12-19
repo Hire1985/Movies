@@ -8,11 +8,6 @@ export const routes: Routes = [
       {
         path: 'search',
         loadComponent: () => import('./components/search-movies/search-movies.component'),
-      },
-      {
-        path: 'releases',
-        loadComponent: () => import('./components/next-releases/next-releases.component'),
-
       }
     ],
   },
@@ -20,7 +15,6 @@ export const routes: Routes = [
     path: 'movies',
     loadComponent: () => import('./pages/movies/movies'),
   },
-
   {
     path: '**',
     redirectTo: 'movies',

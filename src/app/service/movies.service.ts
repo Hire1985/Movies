@@ -19,6 +19,7 @@ export class MoviesService {
 
   constructor() {
     this.loadMovies();
+    this.loadReleasesMovies();
   }
 
   loadMovies() {
