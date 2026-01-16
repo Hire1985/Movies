@@ -24,9 +24,10 @@
     </div>
   </div>
 </div>
+@if (movies().length > 0) {
 <section>
   <app-search-movies [searchMovies]="movies()" />
 </section>
-
+}
 
 <router-outlet />
